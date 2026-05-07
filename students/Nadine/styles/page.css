@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Sekuya", system-ui;
+  box-shadow: 10px 5px 5px 0 rgb(107, 54, 118);
+}
+
+button {
+  border-radius: 5px;
+}
+
+body {
+  padding: 20px;
+  background-color: black;
+  color: aliceblue;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+.light-mode {
+  background-color: rgb(150, 127, 171);
+  color: black;
+}
+
+.light-mode h1 {
+  box-shadow: 10px 5px 5px 0 rgb(250, 171, 171);
+}
+
+.center {
+  width: 940px;
+  padding: 20px;
+  border: 1px dotted white;
+  margin: 20px;
+}
+
+.poem {
+  text-align: center;
+}
+
+#calculator {
+  background-color: rgb(156, 123, 186);
+  display: inline-block;
+  width: 900px;
+  text-align: center;
+}
+
+
+#calculator-buttons {
+  text-align: center;
+}
+footer {
+  background-image: linear-gradient(to bottom, rgb(52, 46, 94), rgb(138, 83, 149));
+  
+}
+
+.light-mode footer {
+  background-image: linear-gradient(to bottom, rgb(250, 171, 171), rgb(203, 156, 200));
+}
+
+.light-mode a {
+ color: rgb(0, 0, 0);
+}
