@@ -5,22 +5,22 @@ body {
   padding: 20px;
   /* TODO Add dark mode styles here. */
   background-color: black;
-  color: #07f226;
+  color: #000000;
   p{
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(49, 243, 10);
   }
   h1{
     background-color: rgb(223, 16, 16);
   }
   b{
-    background-color: aqua;
+    background-color: rgb(13, 244, 244);
   }
 }
 
 .light-mode {
   /* TODO Add light mode styles here. */
   background-color: rgb(243, 137, 50);
-  color: rgb(224, 0, 0);
+  color: rgb(103, 80, 80);
 }
 
 .center {
@@ -47,13 +47,20 @@ footer {
   background-color: aqua;
 }
 
-#counter{
-  background-color: rgb(39, 59, 76);
-  font-size: 24px;
-}
-
 button{
   min-width: 40px;
   min-height: 20px;
   margin: 2px;
+}
+
+.big {
+  font-size: 48px;
+}
+
+.line{
+  display: flex;
+  gap: 15px;
+  justify-content: 
+  space-between;
+  align-items: center;
 }
