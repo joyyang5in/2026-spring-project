@@ -1,0 +1,75 @@
+*
+{
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+  background:black;
+  color:azure;
+   font-family: "Pacifico", cursive;
+   font-family: "Tektur", sans-serif;
+   font-family: "Bytesized", sans-serif;
+  /* TODO Add dark mode styles here. */
+  text-align: center;
+  
+}
+
+h1{
+   font-family: "Pacifico", cursive;
+    font-family: "Tektur", sans-serif;
+    
+}
+i{
+  box-shadow: 10px 5px 5px 0 rgb(53, 3, 65);
+}
+.light-mode {
+     padding: 20px;
+  background:rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  
+  /* TODO Add light mode styles here. */
+}
+button{
+  background: white;
+  color: rgb(0, 140, 255);
+}
+.center {
+  max-width: 940px;
+  padding: 20px;
+  border: 1px dotted white;
+  /* TODO Add margins to center. */
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+.poem {
+  text-align: center;
+}
+
+footer {
+  /* TODO Add styles */
+   color:rgb(255, 255, 255);
+   background-image: linear-gradient(to bottom, rgb(30, 12, 131), rgb(184, 2, 132));
+     max-width: 940px;
+     margin-left:auto;
+  margin-right:auto;
+
+}
+
+.light-mode footer {
+  /* TODO Add footer light mode styles here. */
+   color:rgb(255, 255, 255);
+   text-align: center;
+}
+
+
+.big {
+  font-size: 48px;
+}
+
+.line {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
