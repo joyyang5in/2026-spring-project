@@ -4,7 +4,7 @@
 
 body {
   padding: 20px;
-  background-color: black;
+  background-color: rgb(255, 68, 5);
 
   p {
     background-color: white;
@@ -53,31 +53,20 @@ footer {
   /* TODO Add footer light mode styles here. */
 }
 
-#calculator{
-  background-image: url(../images/yuji\ zazu\ cat.jpeg);
-  border-width: 4px;
-  border-color: #01ff62;
-  border-style: solid;
-  min-width: 200px;
- display: inline-block;
-}
-
-#counter {
-  border-width: 5px;
-  border-color: red;
-  border-style: solid;
-  font-size: 24px;
-margin: 30spx;
-padding: 10px;
-}
-
-#calculator-buttons {
-  border-width: 5px;
-  border-color: red;
-  border-style: solid;
-}
-
 button {
   min-width: 20px;
 padding: 10px;
+}
+
+.big {
+  font-size:48px;
+
+}
+
+.line {
+  display:flex;
+  gap:15px;
+  justify-content: 
+  space-between;
+  align-items: center;
 }
