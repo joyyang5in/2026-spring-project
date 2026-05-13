@@ -34,7 +34,6 @@ body {
 .center {
   width: 940px;
   padding: 20px;
-  border: 1px dotted white;
   margin-right: auto;
   margin-left: auto;
   /* TODO Add margins to center. */
@@ -56,6 +55,7 @@ footer {
 button {
   min-width: 20px;
 padding: 10px;
+margin: 2px;
 }
 
 .big {
@@ -70,3 +70,29 @@ padding: 10px;
   space-between;
   align-items: center;
 }
+
+.underline {
+  display: flex;
+  gap:10px;
+  justify-content: right;
+  border-bottom:1px solid white;
+  margin-bottom:0;
+  padding:0;
+}
+.tab {
+  display:inline-block;
+  border:1px solid white; 
+  border-bottom:none;
+  padding:10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px
+}
+
+.light-mode .underline {
+  border-color:black
+}
+
+.light-mode.tab{
+  border-color:black;
+}
+
