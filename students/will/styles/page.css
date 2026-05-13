@@ -26,7 +26,6 @@ body {
 .center {
   width: 940px;
   padding: 20px;
-  border: 1px dotted rgb(202, 255, 10);
   margin-right:auto ;
   margin-left: auto;
   /* TODO Add margins to center. */
@@ -63,4 +62,30 @@ button{
   justify-content: 
   space-between;
   align-items: center;
+}
+
+.underline {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  border-bottom: 1px solid wheat;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.light-mode .underline{
+  border-color: rgb(251, 8, 8);
+}
+
+.tab{
+  display: inline-block;
+  border: 1px solid white;
+  border-bottom: none;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.light-mode .tab{
+  border-color: black;
 }
