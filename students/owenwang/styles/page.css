@@ -14,13 +14,6 @@ body {
   color: black;
 }
 
-.line {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-  align-items.center;
-}
-
 .center {
   width: 940px;
   padding: 20px;
@@ -28,12 +21,67 @@ body {
   margin-right: auto;
 }
 
+.line {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items.center;
+}
+
 .big {
   font-size: 48px;
 }
 
+.underline {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  padding: 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+}
+
+.light-mode .underline {
+  border-color: black;
+}
+
+.tab {
+  display: inline-block;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.light-mode .tab {
+  border-color: black;
+}
+
+button {
+  min-width: 40;
+  min-height: 20;
+  margin: 2;
+}
+
 h1 {
+  padding: 10px;
   font-family: "Bytesized", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.light-mode h1 {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.light-mode a {
+  color: black;
 }
 
 footer {
@@ -43,4 +91,13 @@ footer {
 
 .light-mode footer {
   background-image: linear-gradient(to bottom, rgb(170, 170, 255), blue);
+}
+
+main {
+  min-height: 50vh;
+  background-color: rgb(255, 255, 255) / 0.1;
+}
+
+.light-mode main {
+  background-color: white;
 }
