@@ -1,0 +1,9 @@
+body {
+    background-color: white;
+    color: black;
+
+    footer p {
+        margin: 30;
+        background-color: rgb(196, 240, 196);
+    }
+}

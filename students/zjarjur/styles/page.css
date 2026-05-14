@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 150px;
+  color: azure;
+  background-color: black;
+  /*font-family: "Kumar One", serif;*/
+  /* TODO Add dark mode styles here. */
+}
+
+header {
+  background-image:
+    linear-gradient(to bottom, rgb(218, 213, 252),
+      rgb(176, 150, 1));
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(88, 22, 22);
+}
+
+.light-mode {
+  color: black;
+  background-color: aliceblue;
+  /* TODO Add light mode styles here. */
+}
+
+.center {
+
+  max-width: 940px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* TODO Add margins to center. */
+}
+
+.poem {
+  text-align: center;
+}
+
+footer {
+  background-color: darkkhaki;
+  /* TODO Add styles */
+}
+
+.light-mode footer {
+  color: rgb(238, 216, 216);
+  background-color: black;
+  /* TODO Add footer light mode styles here. */
+}
+
+h1 {
+  font-family: "Honk", system-ui;
+}
+
+#color-mode-button {
+  background-color: bisque;
+  color: darkslateblue;
+}
+
+button {
+  min-width: 40px;
+  padding: 4px 8px;
+}
+
+.big {
+  font-size: 48px;
+}
+
+
+.line {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.coloring1 {
+  background-image: linear-gradient(to bottom, rgb(146, 136, 209), gold);
+  color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(88, 22, 22);
+}
+
+.menu-bar {
+  /* position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;  Ensures menu stays above other content */
+  background-color: #333;
+}
+
+.underline {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  border-bottom: 2px solid rgb(255, 0, 50);
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.tab {
+  display: inline-block;
+  color: red;
+  background-color: silver;
+  border: 2px solid rgb(255, 0, 50);
+  border-bottom: none;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.light-mode .tab {
+  border-color: black;
+}
+
+a {
+  color: darkblue;
+}
+
+.light-mode a {
+  color: red;
+}
+
+main {
+  min-height: 200vh;
+  ;
+}

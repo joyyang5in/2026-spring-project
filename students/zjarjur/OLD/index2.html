@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first webpage</title>
+        <link rel="stylesheet" href="./styles/first.css" >
+        <link rel="stylesheet" href="./styles/second.css" >
+    </head>
+
+        <body id ="dark">
+            <button id = "color-mode" onclick = "changecolors();">
+                light mode
+            </button>
+
+            <script>
+                const colorModeButton = document.querySelector('#color-mode')
+
+
+                function changecolors(){
+                if (document.body.id === "dark"){
+                    document.body.id = 'light';
+                    colorModeButton.textContent = 'Dark mode'
+                }else{
+                    document.body.id = 'dark';
+                    colorModeButton.textContent = 'light mode'
+                }
+            }
+            </script>
+
+
+            <h1>My first webpage</h1>
+            <img src="./images/Guinea pig.jpg" width = 500>
+            <h2> Full-Stack Curriculum</h2>
+            <p> Learn the skills to become a full-stack developer</p>
+
+            <h3> Introduction to HTML</h3>
+            <p> HTML represents the content and structure of a webpage</p>
+
+            <h3> Introduction to CSS</h3>
+            <p> CSS is used to style a webpage</p> 
+            
+            <script>
+                let cat = {
+                    name: "Mianko",
+                    weight: 3,
+                    happy: false
+                };
+                console.log(cat.name);
+                let family = {
+                    dad: "Ba",
+                    mom: "Ma",
+                    daughter: "Jie",
+                    pet: cat,
+                };
+                console.log(family)
+                family.pet.happy = true;
+                console.log(console)
+                
+                let mood = prompt("How are you feeling");
+                if(mood === "sleepy"){
+                    alert('WAKE UP');
+                }else{
+                    alert("Oh! You are Feeling " + mood + ".");
+                }
+                console.log(mood);
+            </script>
+            <footer>
+            <p>2026/12/3</p>
+            <p>jasper</p>
+            </footer>
+        </body>
+    </html>

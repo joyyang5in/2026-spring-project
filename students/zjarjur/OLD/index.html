@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="En">
+
+<head>
+    <link id="whichSheet" rel="stylesheet" href="./styles/dark.css">
+    <title>
+        Mr. Jarjur's Page
+    </title>
+
+    <script>
+        let mode = 1;
+        const linkElement = document.getElementById('whichSheet');
+        const light = "./styles/light.css";
+        const dark = "./styles/dark.css";
+      
+
+
+        function changeMode() {
+            if (mode === 0) {
+                linkElement.setAttribute('href', dark);
+                mode = 1;
+            } else {
+                linkElement.setAttribute('href', light);
+                mode = 0;
+            }
+
+        }
+
+        function howAreYou() {
+            let feelings = prompt("How are you feeling?");
+            respond(feelings);
+        }
+
+        function respond(mood){
+            if (mood === "sleepy") {
+                alert("Wake Up!");
+            } else {
+                alert("Oh! You are feeling " + mood + ".");
+            }
+
+        } 
+        if (true){
+            let insideIf = "Yes!";
+            console.log(typeof insideIf);
+        }
+        
+        function addTwo(value){
+            return(value+2);
+
+        }
+
+        let result = addTwo(9);
+        console.log(result);
+        
+
+    </script>
+</head>
+
+<body>
+    <h1>
+        The Page of Ultimate Z-ness
+    </h1>
+
+    <button onclick="changeMode();">Change Mode</button>
+
+    <figure>
+    <a href="https://www.google.com/">
+    <img src="./images/Dog Example 1.png" width = 500>
+    </a>
+    <figcaption>That's one fast weiner dog!</figcaption>
+    </figure>
+        <button onclick="howAreYou();">How Are You?</button>
+
+   
+
+    <footer>
+        <p>
+            
+            This space for rent
+        </p>
+        <p>
+            Look at that weiner dog go!
+        </p>
+
+    </footer>
+</body>
+
+</html>
