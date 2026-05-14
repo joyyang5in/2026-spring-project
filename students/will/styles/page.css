@@ -4,13 +4,13 @@
 body {
   padding: 20px;
   /* TODO Add dark mode styles here. */
-  background-color: black;
+  background-color: rgb(95, 93, 93);
   color: #000000;
   p{
     background-color: rgb(49, 243, 10);
   }
   h1{
-    background-color: rgb(223, 16, 16);
+    background-color: rgb(113, 223, 16);
   }
   b{
     background-color: rgb(13, 244, 244);
@@ -20,7 +20,7 @@ body {
 .light-mode {
   /* TODO Add light mode styles here. */
   background-color: rgb(243, 137, 50);
-  color: rgb(103, 80, 80);
+  color: rgb(0, 0, 0);
 }
 
 .center {
@@ -34,6 +34,11 @@ body {
   text-align: center;
 }
 
+main{
+  min-height: 50vh;
+  background-color: azure(255 255 255/0.1);
+}
+
 footer {
   /* TODO Add styles */
   height: 220px;
@@ -43,7 +48,7 @@ footer {
 
 .light-mode footer {
   /* TODO Add footer light mode styles here. */
-  background-color: aqua;
+  background-color: rgb(174, 255, 0);
 }
 
 button{
@@ -88,4 +93,8 @@ button{
 
 .light-mode .tab{
   border-color: black;
+}
+
+a{
+  color: pink;
 }
