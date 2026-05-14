@@ -3,19 +3,19 @@
 }
 body {
   padding: 20px;
-    background-color: #181818;
+    background-color: #222222;
   color: rgb(255, 255, 255);
   /* TODO Add dark mode styles here. */
 }
 
 .light-mode {
-      background-color: rgb(245, 255, 180);
-  color: rgb(255, 88, 191);
+      background-color:#cdffed;
+      color:#ffa5e6;
   /* TODO Add light mode styles here. */
 }
 
 footer {
-    background-color:#ffb5e0;
+    background-color:#76655D;
   text-align: center;
 }
 
@@ -82,4 +82,21 @@ background: radial-gradient(circle, rgba(255, 173, 221, 1) 10%, rgba(148, 242, 2
 
 .light-mode.tab{
     border-color:black;
+}
+
+a{
+    color:rgb(255, 156, 232);
+}
+
+.light-mode a{
+    color:rgb(255, 59, 219)
+}
+
+main{
+    min-height:50vh;
+    background-color:rgb(186, 255, 240)
+}
+
+.light-mode main{
+    background-color: #FFD4F3;
 }
