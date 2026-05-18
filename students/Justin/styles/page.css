@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  color: rgb(180, 27, 164);
+  background-color: rgb(227, 74, 74);
+  background-image: linear-gradient(to bottom, rgb(241, 223, 132), rgb(102, 233, 233));
+  font-family: "Sekuya", system-ui;
+}
+
+.light-mode {
+  background-color: rgb(78, 193, 225);
+  color: rgb(210, 231, 232);
+  box-shadow: 10px 5px5px 0 rgb(29, 26, 26);
+  background-image: linear-gradient(to bottom, rgb(153, 252, 72), rgb(243, 127, 183));
+}
+
+main{
+  min-height: 10px;
+  background-color: rgd;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 20px;
+
+  /* TODO Add margins to center. */
+}
+
+
+footer {
+  min-height: 50vh;
+  padding: 200px;
+  color: brown;
+  background-color: blue;
+  background-image: linear-gradient(to bottom, rgb(111, 212, 209), rgb(160, 200, 75));
+  
+  /* TODO Add footer light mode styles here. */
+  background-color: rgb(93, 221, 84);
+  color: blueviolet;
+  box-shadow: 10px 5px 5px 0 rgba(77, 40, 40, 0.419);
+  border: 15px solid grey;
+  padding: 20px;
+}
+
+.light-mode footer {
+    min-height: 50vh;
+
+  /* TODO Add footer light mode styles here. */
+  background-color: rgb(93, 221, 84);
+  color: blueviolet;
+  box-shadow: 10px 5px 5px 0 rgba(77, 40, 40, 0.419);
+  border: 15px solid grey;
+  padding: 20px;
+}
+
+button {
+  /* 文字色：香檳金 */
+  color: #f7e7ce;
+  /* 邊框：古銅金 */
+  border: 5px solid #d4af37;
+  padding: 10px;
+  width: 110px;
+  /* 背景：深琥珀到焦糖色 */
+  background-image: linear-gradient(to bottom, #8b4513, #b8860b);
+  border-radius: 80px;
+
+  position: relative;
+  overflow: hidden;
+  /* 增加一點深色陰影 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 這裡是流金特效 */
+button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 80%;
+  /* 寬度增加，讓光影感更飽滿 */
+  height: 200%;
+  /* 暖白到金色的漸層 */
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 250, 205, 0.1),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 250, 205, 0.1),
+      transparent);
+  transform: rotate(35deg);
+  /* 動畫時間設為 2.5s，掃描感更優雅 */
+  animation: liquid-gold 2.5s infinite ease-in-out;
+}
+
+@keyframes liquid-gold {
+  0% {
+    left: -150%;
+  }
+
+  45% {
+    left: 150%;
+  }
+
+  /* 控制掃過速度 */
+  100% {
+    left: 150%;
+  }
+}
+
+
+
+/* 定義特效：顏色變換 + 輕微縮放 */
+@keyframes border-dance {
+
+  0%,
+  100% {
+    transform: scale(1);
+    /* 原始大小 */
+    filter: hue-rotate(0deg);
+    /* 原始顏色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  50% {
+    transform: scale(1.02);
+    /* 變大 2% */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    /* 增加發光感 */
+  }
+}
+
+.nana {
+  font-size: 48px;
+}
+
+.line {
+  display: flex;
+  gap: 15px;
+  justify-content:
+    space-between;
+  align-items: center;
+}
+
+.underline{
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  margin-bottom: 0;
+  padding: 0px;
+
+}
+.tab{
+  display: inline-block;
+  border: 1px solid white;
+  border-bottom: none;
+  padding: 10px;
+  border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.light-mode .tab {
+  border-color: black;
+}
+
+.light-mode .underline{
+  border-color: black;
+}
+a {
+  color: rgb(228, 32, 231);
+}
+.light-mode a {
+  color: rgb(0, 0, 0);
+}
+body {
+    /* 讓所有顏色變化在 0.4 秒內平滑完成 */
+    transition: background-color 1s ease, color 1s ease;
+}
+
+header, footer, .tab, button {
+    transition: all 1s ease;
+}
+
+
+/* 設定背景裝飾 */
+body::before,
+body::after {
+    content: "";
+    position: fixed; /* 固定在螢幕兩側，滾動時也會留在原地 */
+    top: 0;
+    width: 150px; /* 圖片的寬度，你可以根據圖片大小調整 */
+    height: 100%;
+    background-image: url("./images/thumb-1920-551673.png");
+    background-repeat: repeat-y; /* 垂直重複鋪滿 */
+    background-size: contain; /* 確保圖片比例正確 */
+    z-index: -1; /* 放在最底層，不會擋到文字 */
+    pointer-events: none; /* 讓滑鼠可以穿透圖片，點擊後面的按鈕 */
+}
+
+/* 左側圖片 */
+body::before {
+    left: 0;
+}
+
+/* 右側圖片 */
+body::after {
+    right: 0;
+}
+
+
+
