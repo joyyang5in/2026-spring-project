@@ -2,11 +2,11 @@ const button = document.getElementById("color-button");
 
 function toggleColorMode(event) {
   if (document.body.classList.contains("dark-mode")) {
-    button.textContent = "🌙";
+    button.textContent = "DARK";
     document.body.classList.replace("dark-mode", "light-mode");
 
   } else {
-    button.textContent = "☀️";
+    button.textContent = "LIGHT";
     document.body.classList.replace("light-mode", "dark-mode");
   }
   console.log("event =", event);
