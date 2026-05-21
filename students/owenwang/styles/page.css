@@ -15,12 +15,29 @@ body {
 }
 
 main {
+  display: flow-root;
   min-height: 50vh;
-  background-color: rgb(255 255 255 / 0.1);
+  background-image: linear-gradient(to bottom, rgb(51, 51, 51), black);
 }
 
 .light-mode main {
+  background-image: linear-gradient(to bottom, white, rgb(204, 204, 255));
+}
+
+h1 {
+  padding: 10px;
   background-color: white;
+  color: black;
+}
+
+.light-mode h1 {
+  background-color: black;
+  color: white;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
 }
 
 .center {
@@ -28,17 +45,6 @@ main {
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.line {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-  align-items.center;
-}
-
-.big {
-  font-size: 48px;
 }
 
 .underline {
@@ -54,38 +60,9 @@ main {
   border-color: black;
 }
 
-.tab {
-  display: inline-block;
-  border: 1px solid white;
-  border-bottom: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 10px;
-}
-
-.light-mode .tab {
-  border-color: black;
-}
-
-button {
-  min-width: 40;
-  min-height: 20;
-  margin: 2;
-}
-
-h1 {
-  padding: 10px;
-  background-color: white;
-  color: black;
-}
-
-.light-mode h1 {
-  background-color: black;
-  color: white;
-}
-
 a {
   color: white;
+  text-decoration: none;
 }
 
 .light-mode a {
@@ -99,4 +76,28 @@ footer {
 
 .light-mode footer {
   background-image: linear-gradient(to bottom, rgb(170, 170, 255), blue);
+}
+
+.big {
+  font-size: 48px;
+}
+
+.line {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items.center;
+}
+
+.tab {
+  display: inline-block;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.light-mode .tab {
+  border-color: black;
 }
