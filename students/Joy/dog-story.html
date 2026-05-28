@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>coding</title>
+    <title>3D</title>
     <link rel="stylesheet" href="./styles/page.css">
+    <link rel="stylesheet" href="./styles/dog.css">
 </head>
 
 <body class="dark-mode">
@@ -12,7 +13,7 @@
         <div class="line center">
             <div class="big line">
 
-                <img src="images/download (19).jpg" width=150px>
+                <img src="images/download (19).jpg" width="150px">
                 <b>Joy</b>
             </div>
 
@@ -28,22 +29,40 @@
         </div>
        
         <ul class="center underline">
-            <li class="tab"><a href="https://joyyang.5in.github.io/week1/">week1</a></li>
+            <li class="tab">
+                <a href="./dog.html">Facts</a>
+             </li>
+
+             <li class="tab">
+                <a href="./dog-story.html">Story</a>
+             </li>
+
+             <li class="tab">
+                <a href="./dog-3d.html">3D</a>
+             </li>
+
         </ul>
 
     </header>
     <main class="center">
-        <h1>coding</h1>
+        <h1>Dog story</h1>
+        <div class="dog-picture">
+            <div class="art-frame">
+        <canvas id="my-graffiti" width="400" height="400"></canvas>
+    </div>
+    <button id="clean">clean graffiti</button>
+</div>
+     
 
 
     </main>
 
 
-
+<h1>Please adopt this dog</h1>
 
     <footer>
         <div class="center">
-            <p>5.14.2026</p>
+            <p>5.18.2026</p>
         </div>
 
 
@@ -58,7 +77,7 @@
 
     </footer>
     <script src="./scripts/color-mode.js"></script>
-
+    <script src="./scripts/graffiti.js"></script>
 </body>
 
 
