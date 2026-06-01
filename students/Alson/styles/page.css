@@ -9,14 +9,13 @@ body {
 }
 
 .light-mode {
-    background-color: azure;
+    background-color: white;
     color: black;
 }
 
 .center {
     width: 940px;
     padding: 20px;
-    border: 1px dotted white;
     margin-left: auto;
     margin-right: auto;
 }
