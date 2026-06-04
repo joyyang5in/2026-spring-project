@@ -9,14 +9,13 @@ body {
 }
 
 .light-mode {
-    background-color: azure;
+    background-color: white;
     color: black;
 }
 
 .center {
     width: 940px;
     padding: 20px;
-    border: 1px dotted white;
     margin-left: auto;
     margin-right: auto;
 }
@@ -26,7 +25,7 @@ body {
 }
 
 #counter {
-    
+
     background-color: white;
     color: black;
     border-width: 4px;
@@ -39,7 +38,7 @@ body {
 
 button {
     border-radius: 100px;
-        background-image: linear-gradient(to bottom, rgb(42, 42, 42), rgb(186, 186, 186));
+    background-image: linear-gradient(to bottom, rgb(42, 42, 42), rgb(186, 186, 186));
     min-width: 50px;
     min-height: 50px;
 }
@@ -72,13 +71,13 @@ footer {
     align-items: center;
 }
 
-.underline{
+.underline {
     display: flex;
     gap: 10px;
     justify-content: right;
     border-bottom: 1px solid white;
     margin-bottom: 0;
-    padding: 0;     
+    padding: 0;
 }
 
 .light-mode .underline {
@@ -110,6 +109,8 @@ h1 {
 }
 
 main {
+    display: flow-root;
     min-height: 50vh;
     background-color: rgb(255, 255, 255 / 0.1);
 }
+
