@@ -47,6 +47,7 @@ shapes();
 */
 let oldX = 0;
 let oldY = 0;
+let tool = toolSelect.value;
 
 function changeColor() {
     surface.strokeStyle = colorInput.value;
@@ -54,8 +55,13 @@ function changeColor() {
 }
 
 function changeSize() {
-   
+
     surface.lineWidth = sizeInput.value;
+}
+
+function changeTool() {
+    tool = toolSelect.value;
+    console.log(tool);
 }
 
 function graffiti(event) {
@@ -63,14 +69,20 @@ function graffiti(event) {
     const x = event.offsetX;
     const y = event.offsetY;
     console.log(x, y, event.buttons);
-    
+
 
     if (event.buttons > 0) {
-        surface.beginPath();
-        surface.moveTo(oldX, oldY);
-        surface.lineTo(x, y);
-        surface.closePath();
-        surface.stroke();
+        if (tool === "eraser") {
+            const width = sizeInput.value;
+            surface.clearRect(x,y,width,width);
+
+        } else {
+            surface.beginPath();
+            surface.moveTo(oldX, oldY);
+            surface.lineTo(x, y);
+            surface.closePath();
+            surface.stroke();
+        }
     }
 
     oldX = x;
@@ -81,5 +93,5 @@ function graffiti(event) {
 graffitiCanvas.addEventListener("mousemove", graffiti);
 colorInput.addEventListener("change", changeColor);
 sizeInput.addEventListener("change", changeSize);
-
+toolSelect.addEventListener("change", changeTool);
 console.log(colorInput.value);
