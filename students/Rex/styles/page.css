@@ -88,7 +88,7 @@ header {
     border-color: rgb(0, 0, 0);
 }
 
-a {
+a{
     color: white;
 }
 
@@ -97,6 +97,11 @@ a {
 }
 
 main{
+    display:flow-root;
     min-height: 50vh;
     background-color: aliceblue/0.1;
+}
+
+.smallFont{
+    font-size: 15px;
 }

@@ -6,6 +6,7 @@
         Will's Dog_page
     </title>
     <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/dog.css">
 </head>
 
 <body class="dark-mode">
@@ -28,19 +29,66 @@
             </menu>
         </div>
         <ul class="center underline">
-            <li class ="tab"><a href="https://willchu5in-sys.github.io/week-1/">Week 1</a> </li>
+            <li class="tab">
+                <a href="./dog.html">Facts</a>
+            </li>
+            <li class="tab">
+                <a href="./dog-story.html">Story</a>
+            </li>
+            <li class="tab">
+                <a href="./dog-3D.html">3D</a>
         </ul>
     </header>
     <main class="center">
-
         <h1>Will's Dog_page</h1>
+        <div class="dog-picture">
+            <div class="art-frame">
+                <img class="art" src="./images/Dog with me full.png" width="400">
+
+                <canvas id="my-graffiti" width="400" height="400">
+                </canvas>
+            </div>
+
+
+            <button id="clean">
+                Clean graffiti
+            </button>
+            <label>
+                Color:
+                <input type="color" value="purple" id="color-input">
+
+            </label>
+            <label>
+                Size:
+                <input type="range" min="1" max="20" value="10" id="sizeInput">
+            </label>
+        </div>
+        <b>His name is Xiaoxiong.
+            He is a male dog.
+            He is small in size (not a puppy).
+            He is very well-behaved.
+            He is afraid of cameras.
+            Shy</b>
+
+        <b>Today, I want to introduce my dog,小熊. He is small, gentle, easy to pet, doesn't poop a lot and very cute.
+            Even though he is not a puppy, he is still very playful.
+            Dogs like 小熊 show us why dogs are great companions. He is well-behaved and easy to take care of. Even though
+            he is small, he brings a lot of happiness to workers in the shelter. This shows that dogs, no matter their
+            size, can have a big positive impact in our lives.
+            Xiaoxiong is a shy dog. He is afraid of cameras. When he sees I want to take a photo with him, he feels
+            scared. This shows dogs have feelings too. So, we should be kind to them and make them feel safe.
+            How to let them feel safe? Well that’s easy, adopt them, give them a home.</b>
+
+        </div>
+        </div>
     </main>
     <footer>
         <div class="center">
-            <p>DATE</p>
+            <p>May 18</p>
         </div>
     </footer>
     <script src=" ./scripts/color-mode.js"></script>
+    <script src="./scripts/graffiti.js"></script>
 </body>
 
 </html>

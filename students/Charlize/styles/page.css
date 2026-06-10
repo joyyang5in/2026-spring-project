@@ -8,13 +8,19 @@ body {
   color: azure;
   font-family: "Pacifico", cursive;
   font-family: "Tektur", sans-serif;
-  font-family: "Bytesized", sans-serif;
+  font-family: "Caveat", sans-serif;
   /* TODO Add dark mode styles here. */
-  text-align: center;
+ 
 
+}
+menu a {
+    font-family: "Bytesized", cursive;
+}
+button {font-family: "Caveat", cursive;
 }
 
 main {
+  display: flow-root;
   min-height: 50vh;
   background-color: black;
 }

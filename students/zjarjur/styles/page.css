@@ -130,6 +130,7 @@ a {
 }
 
 main {
+  display: flow-root;
   min-height: 200vh;
   ;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Graffiti</title>
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/dog.css">
+</head>
+
+<body class="dark-mode">
+
+    <header>
+        <div class="line center">
+            <div class="big line">
+                <b>Adrian
+                </b>
+            </div>
+            <menu class=" line">
+              <a href="./">Home</a>
+              <a href="./dog.html">Dog</a>
+               <a href="./video.html">Video</a>
+                <a href="./philosophy.html">philosophy</a>
+                 <a href="./research.html">Research</a>
+                  <a href="./coding.html">Coding</a>
+                <button id="color-mode-button">Light mode</button>
+
+            </menu>
+        </div>
+       <ul class="center underline">
+            <li class="tab">
+                <a href="coding.html">about my website</a>
+            </li>
+            <li class="tab">
+                <a href="cauculator.html">Cauculator</a>
+            </li>
+            <li class="tab">
+                <a href="Graffiti.html">Graffiti</a>
+            </li>
+
+        </ul>
+    </header>
+
+    <main class="center">
+
+        <h1>Graffiti</h1>
+   <div class="dog-picture">
+            <div class="art-frame">
+                <img class="art" width="400px" src="./images/unnamed (2).webp">
+                <canvas id="my-graffiti" width="400" height="400"></canvas>
+            </div>
+            <button id="clean">
+                Clean Graffiti
+            </button>
+            <lable>
+                Color:
+                <input type="color" value="black" id="color-input">
+
+            </lable>
+            <lable>
+                size:
+                <input type="range" min="1" max="50" value="10" id="size-input">
+            </lable>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class=" center">
+
+            <p>5/14</p>
+        </div>
+    </footer>
+
+    <script src="scripts/color-mode.js"></script>
+    <script src="scripts/color-Graffiti.js"></script>
+
+</body>
+
+</html>
