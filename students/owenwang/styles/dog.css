@@ -1,0 +1,40 @@
+.dog-picture {
+    float: right;
+}
+
+.art-frame {
+    position: relative;
+    width: 404px;
+    height: 404px;
+    border: 2px solid magenta;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.light-mode .art-frame {
+    border-color: rgb(255, 170, 255);
+}
+
+.art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#my-graffiti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+button#clean {
+    width: 105px;
+    margin: 10px;
+}
+
+.art-frame img {
+    border-radius: 8px;
+}

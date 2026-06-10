@@ -3,14 +3,14 @@
 }
 body {
   padding: 20px;
-    background-color: #222222;
-  color: rgb(255, 255, 255);
+    background-color: #323232;
+  color: rgb(255, 166, 242);
   /* TODO Add dark mode styles here. */
 }
 
 .light-mode {
-      background-color:#cdffed;
-      color:#ffa5e6;
+      background-color:#befff3;
+      color:#bababa;
   /* TODO Add light mode styles here. */
 }
 
@@ -31,8 +31,8 @@ footer {
 
 .dark-mode{
 footer {
-    background-color:#ffaddd;
-background: radial-gradient(circle, rgba(255, 173, 221, 1) 10%, rgba(148, 242, 231, 1) 44%);
+   background: #9efff4;
+background: radial-gradient(circle,rgba(158, 255, 244, 1) 25%, rgba(233, 201, 255, 1) 54%, rgba(250, 200, 233, 1) 88%);
   text-align: center;
 }
 }
@@ -93,10 +93,67 @@ a{
 }
 
 main{
+    display:flow-root;
     min-height:50vh;
-    background-color:rgb(186, 255, 240)
+    background-color:rgb(198, 255, 253)
 }
 
 .light-mode main{
     background-color: #FFD4F3;
 }
+
+
+
+image{
+    width: 400px;
+}
+
+button {
+ --glow-color: rgb(135, 247, 255);
+ --glow-spread-color: rgba(16, 255, 239, 0.781);
+ --enhanced-glow-color: rgb(0, 255, 221);
+ --btn-color: rgb(250, 177, 255);
+ border: .15em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 11px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+button::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 20%;
+ left: 0;
+ height: 50%;
+ width: 50%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+button:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+button:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+

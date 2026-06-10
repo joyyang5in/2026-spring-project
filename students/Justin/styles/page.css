@@ -18,8 +18,9 @@ body {
 }
 
 main{
+  display: flow-root;
   min-height: 10px;
-  background-color: rgd;
+  background-color: darkcyan
 }
 
 .center {
@@ -34,7 +35,7 @@ main{
 
 footer {
   min-height: 50vh;
-  padding: 200px;
+  padding: 10px;
   color: brown;
   background-color: blue;
   background-image: linear-gradient(to bottom, rgb(111, 212, 209), rgb(160, 200, 75));
@@ -44,7 +45,11 @@ footer {
   color: blueviolet;
   box-shadow: 10px 5px 5px 0 rgba(77, 40, 40, 0.419);
   border: 15px solid grey;
+    margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   padding: 20px;
+
 }
 
 .light-mode footer {

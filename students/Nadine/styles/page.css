@@ -13,6 +13,8 @@ footer {
 
 button {
   border-radius: 5px;
+  background-color: rgb(250, 171, 171);
+  color: rgb(62, 34, 63);
 }
 
 b {
@@ -37,6 +39,11 @@ a {
 .light-mode h1 {
   box-shadow: 10px 5px 5px 0 rgb(76, 39, 82);
 }
+.light-mode button {
+  border-radius: 5px;
+  background-color: rgb(68, 46, 71);
+  color: rgb(149, 100, 156);
+}
 
 .center {
   width: 940px;
@@ -50,6 +57,7 @@ a {
 }
 
 main {
+  display:flow-root;
   min-height: 50vh;
   background-color: rgb(72, 35, 79);
 }

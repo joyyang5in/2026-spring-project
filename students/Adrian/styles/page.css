@@ -6,6 +6,14 @@ body {
   padding: 20px;
   background-color: #000000;
   color: #00ff51;
+  font-size:24px;
+}
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header, footer, .tab, button {
+    transition: all 0.4s ease;
 }
 
 .light-mode {
@@ -88,4 +96,8 @@ border-top-right-radius: 10px;
 }
 .light-mode .tab{
   border-color:black
+}
+
+main {
+  display: flow-root;
 }

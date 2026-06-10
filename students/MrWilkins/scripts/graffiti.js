@@ -1,0 +1,94 @@
+/*
+ * HTML elements
+ */
+const graffitiCanvas = document.getElementById("my-graffiti");
+const surface = graffitiCanvas.getContext("2d");
+const colorInput = document.getElementById("color-input");
+const sizeInput = document.getElementById("size-input");
+const toolSelect = document.getElementById("tool-select");
+console.log(toolSelect);
+
+/*
+ * Graffiti style.
+ */
+function changeSize() {
+  surface.lineWidth = sizeInput.value;
+}
+changeSize();
+sizeInput.addEventListener("change", changeSize);
+
+let tool;
+function changeTool() {
+  tool = toolSelect.value;
+  console.log(tool);
+}
+changeTool();
+toolSelect.addEventListener("change", changeTool);
+
+
+
+
+surface.lineJoin = "round";
+// surface.strokeStyle = "red";
+function changeColor() {
+  surface.strokeStyle = colorInput.value;
+}
+changeColor();
+colorInput.addEventListener("change", changeColor);
+
+/*
+ * Shapes
+ */
+function shapes() {
+  surface.rect(150, 200, 100, 100);
+  surface.stroke();
+
+  surface.beginPath();
+  surface.moveTo(200, 50);
+  surface.lineTo(150, 200);
+
+  // Add a 7.
+  surface.moveTo(250, 50);
+  surface.lineTo(350, 50);
+  surface.moveTo(350, 50);
+  surface.lineTo(270, 300);
+
+  surface.closePath();
+  surface.stroke();
+}
+shapes();
+
+/*
+ * Clean up
+ */
+function cleanCanvas() {
+  surface.clearRect(0, 0, 400, 400);
+}
+
+/*
+ * Graffiti
+ */
+let oldX = 0;
+let oldY = 0;
+function graffiti(event) {
+  const x = event.offsetX;
+  const y = event.offsetY;
+  console.log(x, y, event.buttons);
+
+  if (event.buttons > 0) {
+    if (tool === "eraser") {
+      const width = sizeInput.value;
+      surface.clearRect(x, y, width, width);
+    } else {
+      surface.beginPath();
+      surface.moveTo(oldX, oldY);
+      surface.lineTo(x, y);
+      surface.closePath();
+      surface.stroke();
+    }
+  }
+
+  oldX = x;
+  oldY = y;
+}
+graffitiCanvas.addEventListener("mousemove", graffiti);

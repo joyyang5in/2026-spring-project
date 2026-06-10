@@ -1,0 +1,161 @@
+.calc-styles {
+  --border-color: orange;
+  --button-size: 56px;
+  --grid-gap: 6px;
+  --buttons-width: calc(4 * var(--button-size) + 3 * var(--grid-gap));
+}
+
+.calc-styles {
+  display: inline-block;
+  
+  gap: var(--grid-gap);
+  border: 2px solid var(--border-color);
+  border-radius: calc(3 * var(--grid-gap));
+  padding: calc(2 * var(--grid-gap));
+  background-color: rgb(0 0 0 / 0.5);
+  font-family: "Courier New", Courier, monospace;
+
+  button {
+    position: static;
+    display: inline-block;
+    width: var(--button-size);
+    height: var(--button-size);
+    margin: 0;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: calc(var(--button-size));
+    box-shadow: 2px 2px 2px 0 rgb(0 0 0 / 0.5);
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    transition: all;
+    transition-duration: 300ms;
+
+    &:active:not([disabled]) {
+      transition: all;
+      transition-duration: 100ms;
+      width: calc(var(--button-size) + 2 * var(--grid-gap));
+      height: calc(var(--button-size) + 2 * var(--grid-gap));
+      margin: calc(-1 * var(--grid-gap));
+      font-size: 28px;
+      z-index: 1;
+      box-shadow: 0 0 10px 10px rgb(0 0 0 / 0.15);
+    }
+
+    &[disabled] {
+      color: rgb(255 255 255 / 0.5);
+      background-color: #999;
+      border-color: #aaa;
+      box-shadow: none;
+    }
+
+    /* Don't let child elements of buttons be targets of click events. */
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+#calculator {
+  --padding: 10px;
+  border: 2px solid var(--border-color);
+  padding: var(--padding) var(--padding) calc(var(--padding) - 5px);
+  border-radius: var(--grid-gap);
+  font-size: 36px;
+  text-align: right;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: calc(4 * var(--grid-gap));
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+.calc-buttons {
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: var(--buttons-width);
+  display: grid;
+  grid-template-columns: calc(3 * var(--button-size) + 2 * var(--grid-gap)) var(
+      --button-size
+    );
+  grid-template-rows: var(--button-size) calc(
+      4 * var(--button-size) + 3 * var(--grid-gap)
+    );
+  gap: var(--grid-gap);
+}
+
+.calc-entry {
+  order: 3;
+
+  display: grid;
+  grid-template-columns: repeat(3, var(--button-size));
+  grid-template-rows: repeat(4, var(--button-size));
+  gap: var(--grid-gap);
+
+  button {
+    background-color: #333;
+
+    &:active:not([disabled]) {
+      background-color: #666;
+    }
+  }
+
+  #calc-button-4,
+  #calc-button-5,
+  #calc-button-6 {
+    order: 2;
+  }
+  #calc-button-1,
+  #calc-button-2,
+  #calc-button-3 {
+    order: 3;
+  }
+  #calc-button-0 {
+    order: 5;
+    grid-column: 2 / 3;
+  }
+}
+
+.calc-operators {
+  order: 2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-rows: repeat(5, var(--button-size));
+  gap: var(--grid-gap);
+
+  button {
+    background-color: #ff8a00;
+
+    &:active:not([disabled]) {
+      background-color: #ffa000;
+    }
+  }
+}
+
+.calc-reset {
+  order: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, var(--button-size));
+  gap: var(--grid-gap);
+
+  button {
+    background-color: #666;
+
+    &:active:not([disabled]) {
+      background-color: #999;
+    }
+  }
+
+  #calc-button-plusone,
+  #calc-button-minusone {
+    background-color: #ff8a00;
+  }
+}

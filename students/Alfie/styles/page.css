@@ -21,9 +21,14 @@ body.light-mode footer {
     border-radius: 15px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .light-mode a {
     color: #000000;
 }
+
 
 body.dark-mode {
     background-color: black;
@@ -137,10 +142,12 @@ button:active {
 }
 
 main {
-    min-height: 50vh;
+    display:flow-root;
+    min-height: 55vh;
     background-color: #fed6d65c;
     border-radius: 15px;
     margin: 30px;
 }
+
 
 

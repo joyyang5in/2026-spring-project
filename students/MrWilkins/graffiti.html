@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Graffiti</title>
+    <link rel="stylesheet" href="styles/page.css" />
+    <link rel="stylesheet" href="styles/counter.css" />
+    <link rel="stylesheet" href="styles/dog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+    />
+  </head>
+  <body class="dark-mode">
+    <header>
+      <div class="line center">
+        <div class="big line">
+          <img src="images/avatar.png" />
+          <b>John</b>
+        </div>
+        <menu class="line">
+          <a href="./">Home</a>
+          <a href="./dog.html">Dog</a>
+          <a href="./videos.html">Videos</a>
+          <a href="./philosophy.html">Philosophy</a>
+          <a href="./research.html">Research</a>
+          <a href="./coding.html">Coding</a>
+          <button id="color-mode-button">Light mode</button>
+        </menu>
+      </div>
+      <ul class="center underline">
+        <li class="tab">
+          <a href="coding.html">About my website</a>
+        </li>
+        <li class="tab">
+          <a href="calculator.html">Calculator</a>
+        </li>
+        <li class="tab">
+          <a href="graffiti.html">Graffiti</a>
+        </li>
+      </ul>
+    </header>
+    <main class="center">
+      <h1>Graffiti</h1>
+
+      <div class="dog-picture">
+        <div class="art-frame">
+          <img class="art" src="./images/not-my-dog.jpg" width="400" />
+          <canvas id="my-graffiti" width="400" height="400"> </canvas>
+        </div>
+
+        <label>
+          Tool:
+          <select id="tool-select">
+            <option value="eraser">Eraser</option>
+            <option value="pen" selected>Pen</option>
+          </select>
+        </label>
+        <label>
+          Color:
+          <input type="color" value="purple" id="color-input" />
+        </label>
+        <label>
+          Size:
+          <input type="range" min="1" max="20" value="10" id="size-input" />
+        </label>
+      </div>
+    </main>
+    <footer>
+      <div class="center">
+        <p>2026-06-04</p>
+      </div>
+    </footer>
+    <script src="scripts/color-mode.js"></script>
+    <script src="scripts/graffiti.js"></script>
+  </body>
+</html>

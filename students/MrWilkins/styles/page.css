@@ -53,6 +53,7 @@ header {
 }
 
 main {
+  display: flow-root;
   min-height: 50vh;
   background-color: rgb(255 255 255 / 0.1);
 }
