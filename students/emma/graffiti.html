@@ -49,6 +49,27 @@
         <h1>
             Graffiti
         </h1>
+        <div class="dog-picture">
+            <div class="art-frame">
+            <img class="art" src="./Images/dog1.png" width="290">
+            <canvas id="graffiti" width="400" height="400"></canvas>
+        </div>
+        <label>
+            Tool
+            <select id="tselect">
+                <option value="eraser">Eraser</option>
+                <option value="pen">Pen</option>
+        </label>
+        <label>
+            Color:
+            <input type="color" value="gray" id="colinput">
+        </label>
+    </br>
+         <label>
+            Size:
+            <input type="range" max="50" min="1" value="10" id="siinput">
+        </label>
+    </div>
 
     </main>
 
@@ -60,9 +81,8 @@
             </p>
         </div>
     </footer>
-    <script src="./scripts/color-mode.js">
-
-    </script>
+    <script src="./scripts/color-mode.js"></script>
+    <script src="./scripts/g.js"></script>
 </body>
 
 </html>

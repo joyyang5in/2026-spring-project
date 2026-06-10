@@ -5,8 +5,8 @@
 }
 .art-frame{
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   border: 10px solid rgb(214, 214, 214);
 }
 .art{
@@ -18,4 +18,5 @@
   position: absolute;
   top: 0px;
   left:0px;
+  cursor: crosshair;
 }
