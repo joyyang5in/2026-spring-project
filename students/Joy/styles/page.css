@@ -171,7 +171,7 @@ border-radius: 5%;
 }
 
 #calculator{
-  background-color: rgb(127, 127, 127);
+  background-color: rgb(61, 61, 61);
   border-color:rgb(255, 181, 245);
   border-width: 5px;
   border-style: solid;
@@ -186,4 +186,20 @@ border-radius: 5%;
   border-style: solid;
   max-width: 100px;
   text-align: center;
+}
+
+figure{
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(219, 219, 219);
+    padding: 5px;
+}
+
+.light-mode figure{
+    border-color: rgb(151, 255, 255);
+}
+
+figcaption{
+    font-weight:bold;
 }

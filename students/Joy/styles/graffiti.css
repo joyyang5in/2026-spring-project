@@ -2,7 +2,13 @@
     float: right;
     margin-left: 20px;
     margin-bottom: 20px;
-    width: 400px;
+}
+
+.art-frame{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border: 10px solid rgb(249, 255, 195);
 }
 
 .art{
