@@ -147,7 +147,7 @@ class ModelRotator {
     this.scene.add(floor);
   }
 
-  load(path = "/images/Duck.glb", scale = 1, callback = null) {
+  load(path, scale = 1, callback = null) {
     const gltfLoader = new GLTFLoader();
     const scene = this.scene;
     const thisModelRotator = this;
