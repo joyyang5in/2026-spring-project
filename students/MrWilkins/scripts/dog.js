@@ -2,7 +2,7 @@ import { ModelRotator } from "../../../scripts/model-rotator.js";
 import { AnimationMixer } from "three";
 
 const dog = new ModelRotator("dog-3d");
-const model = "../images/Fox.glb";
+const model = "/2026-spring-project/students/MrWilkins/images/Fox.glb";
 const scale = 0.05;
 const position = {
   x: -5,
