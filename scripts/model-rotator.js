@@ -12,13 +12,15 @@ import {
   PlaneGeometry,
   Scene,
   WebGLRenderer,
-} from "three";
-import { OrbitControls } from "three/addons/controls/OrbitControls.min.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.min.js";
+} from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.min.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.min.js';
 
 class ModelRotator {
   camera;
   controls;
+  mixer;
+  model;
   renderer;
   scene;
 
@@ -35,7 +37,7 @@ class ModelRotator {
 
     // Scene
     this.scene = new Scene();
-    this.scene.background = new Color( 0x9ddbff );
+    this.scene.background = new Color(0x9ddbff);
 
     // Lights
     const ambientLight = new AmbientLight(0xffffff, 2.4);
@@ -68,16 +70,29 @@ class ModelRotator {
     this.renderer.setSize(sizes.width, sizes.height);
   }
 
+  setAnimationMixer(mixer) {
+    this.mixer = mixer;
+  }
+
   animate() {
     const clock = new Clock();
+    let previousTime = 0;
 
     const camera = this.camera;
     const controls = this.controls;
     const renderer = this.renderer;
     const scene = this.scene;
+    const thisModelRotator = this;
 
     const tick = () => {
       const elapsedTime = clock.getElapsedTime();
+      const deltaTime = elapsedTime - previousTime;
+      previousTime = elapsedTime;
+
+      // Model animation
+      if (thisModelRotator.mixer) {
+        thisModelRotator.mixer.update(deltaTime);
+      }
 
       // Update controls
       controls.update();
@@ -92,7 +107,7 @@ class ModelRotator {
     tick();
   }
 
-  cameraPosition({x, y, z}) {
+  cameraPosition({ x, y, z }) {
     if (x) {
       this.camera.position.x = x;
     }
@@ -107,8 +122,8 @@ class ModelRotator {
   loadCube(size = 1) {
     const geometry = new BoxGeometry(size, size, size, 5, 5, 5);
     const materialRed = new MeshBasicMaterial({ color: 0xff0000 });
-    const materialGreen = new MeshBasicMaterial({ color: 0x00ff00 });
-    const materialBlue = new MeshBasicMaterial({ color: 0x0000ff });
+    // const materialGreen = new MeshBasicMaterial({ color: 0x00ff00 });
+    // const materialBlue = new MeshBasicMaterial({ color: 0x0000ff });
     const mesh = new Mesh(geometry, materialRed);
     this.scene.add(mesh);
   }
@@ -118,11 +133,11 @@ class ModelRotator {
     this.scene.add(axes);
   }
 
-  loadFloor() {
+  loadFloor(size = 10, color = '#444444') {
     const floor = new Mesh(
-      new PlaneGeometry(10, 10),
+      new PlaneGeometry(size, size),
       new MeshStandardMaterial({
-        color: "#444444",
+        color: color,
         metalness: 0,
         roughness: 0.5,
       }),
@@ -132,22 +147,33 @@ class ModelRotator {
     this.scene.add(floor);
   }
 
-  load(path = "/images/Duck.glb", scale = 1) {
+  load(path, scale = 1, callback = null) {
     const gltfLoader = new GLTFLoader();
     const scene = this.scene;
+    const thisModelRotator = this;
+
+    let webServerRoot = '/2026-spring-project';
+    if (!new URL(import.meta.url).pathname.startsWith(`${webServerRoot}/`)) {
+      webServerRoot = '';
+    }
 
     gltfLoader.load(
-      path,
+      `${webServerRoot}${path}`,
       (gltf) => {
-        console.log("Imported model", gltf);
+        console.log('Imported model', gltf);
         gltf.scene.scale.set(scale, scale, scale);
-        scene.add(gltf.scene);
+        thisModelRotator.model = gltf;
+        scene.add(thisModelRotator.model.scene);
+
+        if (callback) {
+          callback(gltf);
+        }
       },
       () => {
-        console.log("progress");
+        console.log('progress');
       },
-      () => {
-        console.log("error");
+      (error) => {
+        console.log(error);
       },
     );
   }
